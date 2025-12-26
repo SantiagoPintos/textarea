@@ -87,9 +87,6 @@
       else {
         await set(localStorage.getItem('hash') ?? '')
         if (article.textContent) history.replaceState({}, '', await get())
-        focusEditor()
-        restoreCaret()
-        article.focus()
       }
     } catch (e) {
       article.textContent = ''
