@@ -32,10 +32,26 @@ html {
   background: color-mix(in oklab, canvas 92%, currentColor 8%);
   color: inherit;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .toolbar button:active {
   transform: translateY(1px);
+}
+
+@media (max-width: 640px) {
+  .toolbar {
+    top: 8px;
+    right: 8px;
+  }
+  
+  .toolbar button {
+    font-size: 16px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    min-height: 44px;
+  }
 }
 
 article {
